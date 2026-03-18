@@ -39,6 +39,101 @@ O notebook [PabloGonzalez_RM567944_fase5_cap1.ipynb](https://colab.research.goog
 [https://youtu.be/kgZfllw3g1A](https://youtu.be/kgZfllw3g1A) – vídeo com a explicação breve do projeto.
 
 ---
+## ☁️ Entrega 2 – Estimativa de Custos AWS e Conformidade Legal
+
+### Objetivo
+Realizar uma estimativa de custos (On-Demand – 100%) para uma máquina Linux com as seguintes configurações:
+- 2 CPUs
+- 1 GiB de memória RAM
+- Até 5 Gigabit de rede
+- 50 GB de armazenamento (HD)
+
+Comparar os valores para as regiões:
+- **São Paulo (BR) – sa-east-1**
+- **Virgínia do Norte (EUA) – us-east-1**
+
+Analisar qual solução é mais barata e, considerando restrições legais de armazenamento no exterior (LGPD), escolher a opção mais adequada.
+
+---
+
+###  1. Configuração da Instância EC2 na AWS Pricing Calculator
+
+Acesse a ferramenta: [https://calculator.aws/](https://calculator.aws/)
+
+**Passo a passo realizado:**
+1. **Criação de uma nova estimativa**
+2. **Seleção do serviço EC2**
+3. **Configuração da instância:**
+   - **Região:** testadas separadamente (sa-east-1 e us-east-1)
+   - **Tenancy:** Compartilhada (Shared)
+   - **Sistema Operacional:** Linux
+   - **Número de instâncias:** 1
+   - **Família da instância:** t3.micro (2 vCPU, 1 GiB RAM)
+   - **Plano de pagamento:** On-Demand (730 horas/mês)
+4. **Armazenamento:**
+   - 1 volume EBS de 50 GB
+   - Tipo: General Purpose SSD (gp3)
+5. **Transferência de dados:**
+   - Estimativa de 100 GB/mês de saída (tráfego da API)
+
+---
+
+
+![Estimativas ](aws-estimativa.png)
+
+
+---
+
+###  3. Análise de Conformidade Legal (LGPD)
+
+O enunciado menciona restrições legais para armazenamento no exterior. A **Lei Geral de Proteção de Dados (LGPD)** estabelece regras para transferência internacional de dados pessoais.
+
+**Principais requisitos da LGPD:**
+- Art. 33: A transferência internacional é permitida quando o país de destino oferece grau de proteção adequado ou quando o controlador oferece garantias de conformidade (cláusulas contratuais padrão, regras corporativas globais, etc.).
+- O controlador deve demonstrar **accountability** – ou seja, que adota medidas para proteger os dados.
+
+**Cenário da fazenda:**
+- Os dados dos sensores podem ou não conter informações pessoais (depende do que é coletado).
+- Mesmo sem dados pessoais, a empresa pode ter política interna de **soberania de dados** (manter dados no Brasil por decisão estratégica).
+
+**Opções da AWS para conformidade:**
+- A AWS oferece **Data Processing Agreement (DPA)** que atende aos requisitos da LGPD.
+- O cliente pode escolher a região onde os dados serão armazenados.
+- Ferramentas de criptografia e controle de acesso garantem proteção adicional.
+
+---
+
+### 4. Recomendação Final
+
+Considerando os dois fatores – **custo** e **conformidade legal**:
+
+| Critério | Análise |
+|----------|---------|
+| **Menor custo** | Virgínia do Norte (US$ 11.59/mês) |
+| **Maior custo** | São Paulo (US$ 19.86/mês) |
+| **Conformidade LGPD** | São Paulo elimina qualquer questionamento sobre transferência internacional |
+| **Soberania de dados** | São Paulo atende a políticas internas de manter dados no Brasil |
+| **Risco legal** | São Paulo = risco zero; Virgínia = necessidade de garantir conformidade contratual |
+
+**Decisão final:**
+
+> **Opção escolhida: Região São Paulo (sa-east-1)**  
+> *Justificativa: Apesar do custo aproximadamente 42% superior (US$ 19.86  vs US$ 11.59), a escolha pela região brasileira garante que os dados permaneçam em território nacional, atendendo às exigências da LGPD e eliminando riscos legais associados à transferência internacional de dados. A diferença de US$ 10,27/mês é um investimento aceitável para segurança jurídica e conformidade.*
+
+---
+
+### Prints da Simulação
+
+Inclua aqui as capturas de tela da calculadora AWS:
+
+**Região São Paulo:**
+![EC2 sa-east-1](aws-saopaulo.png)
+
+**Região Virgínia do Norte:**
+![EC2 us-east-1](aws-virginia.png)
+
+---
+
 
 **Nome:** Pablo Leon D Gonzalez
 **RM:** 567944 
