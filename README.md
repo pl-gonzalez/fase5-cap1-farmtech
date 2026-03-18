@@ -30,7 +30,7 @@ A **Regressão Linear** foi escolhida como o melhor modelo por aliar:
 - Baixo custo computacional para inferência
 
 ### Estrutura do Notebook
-O notebook `PabloGonzalez_RM567944_fase5_cap1.ipynb` contém todo o desenvolvimento, organizado em seções com:
+O notebook [PabloGonzalez_RM567944_fase5_cap1.ipynb](https://colab.research.google.com/drive/1yHbq1vXUE5YkjITE1lwy9bLj2OwHsdl_?usp=drive_link) contém todo o desenvolvimento, organizado em seções com:
 - Código Python comentado e otimizado
 - Visualizações e tabelas
 - Células markdown com a descrição dos achados e conclusões
