@@ -29,7 +29,7 @@ A **análise exploratória (EDA)** revelou que:
 - As **variáveis climáticas** são bastante homogêneas entre as culturas, com baixa variabilidade e correlações fracas com o rendimento.
 
 ### Clusterização (Não Supervisionado)
-Utilizando **K-Means apenas com variáveis climáticas**, identificamos **6 clusters** com separação moderada (silhouette = 0,4457). Os clusters apresentaram **perfis de rendimento distintos**, sugerindo que, mesmo em condições climáticas similares, é possível agrupar observações com produtividades diferentes. O **DBSCAN** complementou a análise, detectando outliers que podem representar condições extremas ou erros de medição.
+Utilizando **K-Means apenas com variáveis climáticas**, identificamos **6 clusters** com separação moderada (silhouette = 0,4457). Os clusters apresentaram **perfis de rendimento distintos**, sugerindo que, mesmo em condições climáticas similares, é possível agrupar observações com produtividades diferentes.
 
 ### Modelagem Preditiva (Supervisionado)
 Foram treinados cinco modelos: **Regressão Linear, Árvore de Decisão, Random Forest, Gradient Boosting e SVR**.  
