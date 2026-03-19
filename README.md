@@ -72,8 +72,6 @@ Analisar qual solução é mais barata e, considerando restrições legais de ar
 
 ###  1. Configuração da Instância EC2 na AWS Pricing Calculator
 
-Acesse a ferramenta: [https://calculator.aws/](https://calculator.aws/)
-
 **Passo a passo realizado:**
 1. **Criação de uma nova estimativa**
 2. **Seleção do serviço EC2**
@@ -99,8 +97,6 @@ Acesse a ferramenta: [https://calculator.aws/](https://calculator.aws/)
 ---
 
 ###  3. Análise de Conformidade Legal (LGPD)
-
-O enunciado menciona restrições legais para armazenamento no exterior. A **Lei Geral de Proteção de Dados (LGPD)** estabelece regras para transferência internacional de dados pessoais.
 
 **Principais requisitos da LGPD:**
 - Art. 33: A transferência internacional é permitida quando o país de destino oferece grau de proteção adequado ou quando o controlador oferece garantias de conformidade (cláusulas contratuais padrão, regras corporativas globais, etc.).
@@ -137,8 +133,6 @@ Considerando os dois fatores – **custo** e **conformidade legal**:
 ---
 
 ### Prints da Simulação
-
-Inclua aqui as capturas de tela da calculadora AWS:
 
 **Região São Paulo:**
 ![EC2 sa-east-1](aws-saopaulo.png)
