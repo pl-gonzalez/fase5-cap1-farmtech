@@ -1,8 +1,22 @@
-##  FarmTech Solutions – Análise de Rendimento de Safras
+#  FarmTech Solutions – Análise de Rendimento de Safras
 
-Este repositório contém o projeto desenvolvido para a **Fase 5** do curso, com o objetivo de analisar e modelar o rendimento de diferentes culturas agrícolas com base em variáveis climáticas.
+<p align="center">
+<a href= "https://www.fiap.com.br/"><img src="./logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
+</p>
 
-### Contexto
+## Nome do grupo: Grupo 9
+
+##  Integrantes: 
+- <a href="https://www.linkedin.com/in/leon-gonzalez-8701b9199/">Pablo Leon Dimauro Gonzalez RM: 567944</a>
+
+##  Professores:
+### Tutor(a) 
+- Ana Cristina Santos</a>
+### Coordenador(a)
+- <a href="https://www.linkedin.com/in/andregodoichiovato/">André Godoi</a>
+
+
+### Descrição
 Uma fazenda de médio porte produz quatro culturas: **Cacau, Óleo de Palma, Arroz e Borracha**. Foram coletados dados de **precipitação, temperatura, umidade específica, umidade relativa** e o respectivo **rendimento** (em toneladas/hectare). O desafio foi:
 
 - Explorar os dados para entender padrões e relações;
@@ -132,8 +146,4 @@ Inclua aqui as capturas de tela da calculadora AWS:
 **Região Virgínia do Norte:**
 ![EC2 us-east-1](aws-virginia.png)
 
----
 
-
-**Nome:** Pablo Leon D Gonzalez
-**RM:** 567944 
